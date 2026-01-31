@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Niu Chat - Entry</title>
+    <title>Niu Chat - Mobile</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -29,24 +29,25 @@
             background-size: cover;
             background-position: center;
             opacity: 0;
-            animation: fadeAnimation 8s infinite;
+            /* سرعة الحركة: 4 ثوانٍ للدورة كاملة */
+            animation: fadeAnimation 4s infinite ease-in-out;
         }
 
-        /* روابط الصور المباشرة */
-        .slide:nth-child(1) { background-image: url('https://lh3.googleusercontent.com/d/1AVvwOo_wPns1y2uKBrzMY6u6AdQIinTr'); animation-delay: 0s; }
-        .slide:nth-child(2) { background-image: url('https://lh3.googleusercontent.com/d/1P_gWvlez3AZF3Gl4eUSiStnK2cYPVBYn'); animation-delay: 2s; }
-        .slide:nth-child(3) { background-image: url('https://lh3.googleusercontent.com/d/1RIDGyUHpSKixIxwI-gTOXdOOrU7gGD3S'); animation-delay: 4s; }
-        .slide:nth-child(4) { background-image: url('https://lh3.googleusercontent.com/d/1gkO2gx_vxX21K1FAbKmRrRyQ6Xb4m0XR'); animation-delay: 6s; }
+        /* روابط الصور بعد التعديل لتعمل مباشرة */
+        .slide:nth-child(1) { background-image: url('https://lh3.googleusercontent.com/u/0/d/1AVvwOo_wPns1y2uKBrzMY6u6AdQIinTr'); animation-delay: 0s; }
+        .slide:nth-child(2) { background-image: url('https://lh3.googleusercontent.com/u/0/d/1P_gWvlez3AZF3Gl4eUSiStnK2cYPVBYn'); animation-delay: 1s; }
+        .slide:nth-child(3) { background-image: url('https://lh3.googleusercontent.com/u/0/d/1RIDGyUHpSKixIxwI-gTOXdOOrU7gGD3S'); animation-delay: 2s; }
+        .slide:nth-child(4) { background-image: url('https://lh3.googleusercontent.com/u/0/d/1gkO2gx_vxX21K1FAbKmRrRyQ6Xb4m0XR'); animation-delay: 3s; }
 
         @keyframes fadeAnimation {
             0% { opacity: 0; }
-            15% { opacity: 1; }
-            35% { opacity: 1; }
-            50% { opacity: 0; }
+            20% { opacity: 1; }
+            45% { opacity: 1; }
+            60% { opacity: 0; }
             100% { opacity: 0; }
         }
 
-        /* منطقة المحتوى الأسفل */
+        /* منطقة المحتوى والزر */
         .content {
             position: relative;
             z-index: 10;
@@ -55,17 +56,16 @@
             flex-direction: column;
             justify-content: flex-end; 
             align-items: center;
-            padding-bottom: 60px;
-            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);
+            padding-bottom: 70px;
+            background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 60%);
         }
 
-        /* تصميم الزر */
         .niu-btn {
             background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.4);
-            padding: 15px 55px;
+            padding: 18px 60px;
             border-radius: 50px;
             color: white;
             font-size: 24px;
@@ -73,31 +73,31 @@
             font-weight: bold;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             transition: 0.3s;
-            margin-bottom: 15px; /* مسافة للنص الذي تحته */
+            margin-bottom: 12px;
         }
 
-        /* النص تحت الزر */
         .sub-text {
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0.9);
             font-size: 16px;
-            letter-spacing: 1px;
-            animation: pulse 2s infinite;
+            font-weight: bold;
+            text-shadow: 1px 1px 10px rgba(0,0,0,1);
+            animation: pulse 1.5s infinite;
         }
 
         @keyframes pulse {
             0% { opacity: 0.5; transform: scale(0.95); }
-            50% { opacity: 1; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.05); }
             100% { opacity: 0.5; transform: scale(0.95); }
         }
 
-        .niu-btn:active { transform: scale(0.9); }
+        .niu-btn:active { transform: scale(0.92); }
     </style>
 </head>
 <body>
 
     <div class="slider">
         <div class="slide"></div>
-        <div class="slide)</div>
+        <div class="slide"></div>
         <div class="slide"></div>
         <div class="slide"></div>
     </div>
@@ -109,4 +109,3 @@
 
 </body>
 </html>
-
